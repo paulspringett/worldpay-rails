@@ -13,7 +13,7 @@ module Worldpay
           :instId => "#{installation_id}",
           :cartId => "#{cart_id}",
           :amount => "#{amount}",
-          :currency => "GBP",
+          :currency => "USD",
           :desc => "Purchase"
         }.merge(options)
 
