@@ -6,7 +6,12 @@ module Worldpay
     end
 
     def self.test?
-      not Worldpay.in_production?
+      @@test_mode || not Worldpay.in_production?
+    end
+    
+    # can set this in your environment files
+    def self.test_mode=(value = false)
+      @@test_mode = value
     end
 
     def self.in_production?
