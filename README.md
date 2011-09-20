@@ -42,7 +42,7 @@ Create redirect HTML form:
 	# these parameters are handled as follows:
 
 	# in lib/helpers.rb
-	# Worldpay::Rails::Helpers
+	# Worldpay::InstanceMethods
 
 	def worldpay_form_tag(installation_id, order_ref, amount, options = {})
 
@@ -67,7 +67,7 @@ Create redirect HTML form:
 		def worldpay_callback
 			
 			# parse response parameters into new Worldpay::Rails::Response object
-			notification = Worldpay::Rails::Response.new(params, request.raw_post)
+			notification = Worldpay::Response.new(params, request.raw_post)
 
 			# find the relevant order from the db
 			order = Order.find_by_reference(notification.order_ref)
