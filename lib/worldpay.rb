@@ -9,9 +9,9 @@ module Worldpay
   
   def self.uri
     if Worldpay.test?
-      "https://select-test.wp3.rbsworldpay.com/wcc/purchase"
+      "https://select-test.worldpay.com/wcc/purchase"
     else
-      "https://secure.wp3.rbsworldpay.com/wcc/purchase"
+      "https://secure.worldpay.com/wcc/purchase"
     end
   end
 
